@@ -1,0 +1,76 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestras Disponíveis</title>
+    <style>
+       
+
+
+        body {
+            background-image: url(./imgs/pastel.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #e0e404;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #be9d05;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Escolha uma palestra</h1>
+    <div id="buttons">
+        <button onclick="mostrarPalestra(1)">1 - Animações com Scratch</button>
+        <button onclick="mostrarPalestra(2)">2 - Scratch para gamers</button>
+        <button onclick="mostrarPalestra(3)">3 - JavaScript para leigos</button>
+        <button onclick="mostrarPalestra(4)">4 - Tópicos avançados de JavaScript</button>
+        <button onclick="mostrarPalestra(5)">5 - Vida e Carreira</button>
+    </div>
+
+    <div id="resultado"></div>
+
+    <script>
+        function mostrarPalestra(opcao) {
+            let resultado = document.getElementById("resultado");
+
+            if (opcao === 1) {
+                resultado.innerHTML = "1- Animações com Scratch, Laboratório 305, 19h";
+            } else if (opcao === 2) {
+                resultado.innerHTML = "2- Scratch para gamers, Laboratório 512, 20h";
+            } else if (opcao === 3) {
+                resultado.innerHTML = "3- JavaScript para leigos, Laboratório 101, 19h";
+            } else if (opcao === 4) {
+                resultado.innerHTML = "4- Tópicos avançados de JavaScript, Laboratório 305, 20h";
+            } else if (opcao === 5) {
+                resultado.innerHTML = "5- Vida e Carreira, Auditório, 21h.";
+            }
+        }
+    </script>
+
+</body>
+</html>
